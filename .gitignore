@@ -1,0 +1,5 @@
+shopware/
+*.tar.gz
+*.gz
+*.sql
+db/*.sql

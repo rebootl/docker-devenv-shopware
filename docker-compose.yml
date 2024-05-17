@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+
+  web:
+    build: ./web
+    depends_on:
+      - "db"
+    ports:
+      - "127.0.0.1:2020:80"
+    volumes:
+      - "./shopware:/var/www/html/"
+    restart: unless-stopped
+    environment:
+      - TZ=Europe/Zurich
+
+  db:
+    build: ./db
+    environment:
+      - "MARIADB_ROOT_PASSWORD=my-secret-pw"
+    restart: unless-stopped
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 127.0.0.1:2022:8080
+    environment:
+      - TZ=Europe/Zurich
