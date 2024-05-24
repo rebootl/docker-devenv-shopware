@@ -27,3 +27,9 @@ services:
       - 127.0.0.1:2022:8080
     environment:
       - TZ=Europe/Zurich
+
+  mail:
+    image: sj26/mailcatcher
+    restart: always
+    ports:
+      - 127.0.0.1:2024:1080
