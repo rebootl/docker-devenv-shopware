@@ -4,10 +4,11 @@ Usage:
 
 - shopware installation should go to `./shopware`
 - database to `./db/shopware6.sql`
+- adapt ports etc. to your liking
 
 Shop front: http://localhost:2020/public/
 
-Admin: https://shop.revamp-it.ch/admin/
+Admin: https://localhost:2020/public/admin/
 
 Note: The sales channel URL has to be adapted in the Admin.
 
